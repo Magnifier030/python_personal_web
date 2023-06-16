@@ -1,0 +1,85 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+何敏煌的網站
+{% endblock %}
+
+{% block haedmessage %}
+<h2> 所有超過10台可用自行車的站台列表</h2>
+{% endblock %}
+
+{% block content %}
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+      <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+      </div> -->
+      <div class="container">
+          <div class="banner_content text-center">
+              <h2>新竹腳踏車篩選</h2>
+          </div>
+      </div>
+  </div>
+  <div class="hotel_booking_area position">
+      <div class="container">
+          <div class="hotel_booking_table">    
+            <div class="col-md-3">
+                    <h2>請輸入台數</h2>
+                    <h4>搜尋超過此台數的所有站牌</h4>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="book_tabel_item">
+                        <form class="row">
+                            <div class="input-group">
+                                <input placeholder="請輸入台數" required="required" list="id" name="num" type="number"
+                                    class="col-sm-12 custom-select custom-select-sm"
+                                    style="height: 38px; border-color: #2b3146;color:#777; BACKGROUND-COLOR: transparent;;" />
+                            </div>
+                            <div class="input-group">
+                                <input type="submit" placeholder="送出" class="book_now_btn button_hover">
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+          </div>
+      </div>
+  </div>
+</section>
+{% if searched %}
+  <div class="about_history_area section_gap">
+    <div class="container">
+      <section class="about_history_area section_gap" style="background-color: #F8F8FF;">
+        <div class="container">
+          <h2>最後更新時間 : {{date}}</h2>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                      <th>站名</th>
+                      <th>可用台數</th>
+                      <th>總數</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for item in data %}
+                  <tr>
+                    <th>{{ item.sna }}</th>
+                    <th>{{ item.sbi }}</th>
+                    <th>{{ item.tot }}</th>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                      <th>站名</th>
+                      <th>可用台數</th>
+                      <th>總數</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

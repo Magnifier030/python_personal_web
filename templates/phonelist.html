@@ -1,0 +1,76 @@
+{% extends "base/base.html" %}
+
+{% block title %} 何敏煌的網站 {% endblock %}
+
+{% block headmessage %}
+<h2> 所有新款手機列表</h2>
+{% endblock %}
+
+{% block content %}
+<section class="banner_area">
+    <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+        <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+        </div> -->
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>手機查詢</h2>
+            </div>
+        </div>
+    </div>
+    <div class="hotel_booking_area position">
+        <div class="container">
+            <div class="hotel_booking_table">
+                <div class="col-md-4"></div>
+                <div class="col-md-5">
+                    <h2>可點選國家或廠牌</h2>
+                    <h3>進行近一步的手機詳細內容篩選</h3>
+                </div>
+                <div class="col-md-5"></div>        
+            </div>
+        </div>
+    </div>
+</section>
+<div class="about_history_area section_gap">
+    <div class="container">
+        <section class="about_history_area section_gap" style="background-color: #F8F8FF;">
+            <div class="container">
+                <table id="example" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>品名</th>
+                            <th>價格</th>
+                            <th>廠牌</th>
+                            <th>生產國</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.price}}</td>
+                            <td>
+                                <a href="/phonelist/maker/{{item.maker.id}}/">{{item.maker.name}}</a>
+                            </td>
+                            <td>
+                                <a href="/phonelist/country/{{item.maker.country}}/">{{item.maker.country}}</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>排名</th>
+                            <th>品名</th>
+                            <th>價格</th>
+                            <th>廠牌</th>
+                            <th>生產國</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

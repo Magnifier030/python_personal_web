@@ -1,0 +1,63 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+何敏煌的網站
+{% endblock %}
+
+{% block haedmessage %}
+<h2> 所有超過10台可用自行車的站台列表</h2>
+{% endblock %}
+
+{% block content %}
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+      <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+      </div> -->
+      <div class="container">
+          <div class="banner_content text-center">
+              <h2>新竹腳踏車查詢</h2>
+          </div>
+      </div>
+  </div>
+  <div class="hotel_booking_area position">
+      <div class="container">
+          <div class="hotel_booking_table">       
+          </div>
+      </div>
+  </div>
+</section>
+  <div class="about_history_area section_gap">
+    <div class="container">
+      <section class="about_history_area section_gap" style="background-color: #F8F8FF;">
+        <div class="container">
+          <h2>最後更新時間 : {{date}}</h2>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                      <th>站名</th>
+                      <th>可用台數</th>
+                      <th>總數</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for item in data %}
+                  <tr>
+                    <th>{{ item.sna }}</th>
+                    <th>{{ item.sbi }}</th>
+                    <th>{{ item.tot }}</th>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                      <th>站名</th>
+                      <th>可用台數</th>
+                      <th>總數</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    </div>
+  </div>
+{% endblock %}

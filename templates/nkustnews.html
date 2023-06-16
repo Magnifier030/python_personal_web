@@ -1,0 +1,56 @@
+{% extends "base/base.html" %}
+{% block title %}
+何敏煌的網站
+{% endblock %}
+{% block headmessage %}
+<h2> 高科焦點新聞 </h2>
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+      <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+      </div> -->
+      <div class="container">
+          <div class="banner_content text-center">
+              <h2>高科大焦點新聞</h2>
+          </div>
+      </div>
+  </div>
+  <div class="hotel_booking_area position">
+      <div class="container">
+          <div class="hotel_booking_table">      
+          </div>
+      </div>
+  </div>
+</section>
+<div class="about_history_area section_gap">
+  <div class="container">
+    <section class="about_history_area section_gap" style="background-color: #F8F8FF;">
+      <div class="container">
+          <table id="example" class="display" style="width:100%">
+              <thead>
+                  <tr>
+                      <th>編號</th>
+                      <th>新聞名稱</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {% for item in data %}
+                <tr>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.title }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <th>編號</th>
+                      <th>新聞名稱</th>
+                  </tr>
+              </tfoot>
+          </table>
+      </div>
+  </section>
+  </div>
+</div>
+{% endblock %}

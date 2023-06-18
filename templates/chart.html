@@ -1,13 +1,29 @@
 {% extends "base/base.html" %}
 
-{% block title %} 何敏煌的網站 {% endblock %}
+{% block title %} 手機圖表分析 {% endblock %}
 
 {% block headmessage %}
 <h2>手機價格比較圖表</h2>
 {% endblock %}
 
 {% block content %}
-
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+      <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+      </div> -->
+      <div class="container">
+          <div class="banner_content text-center">
+              <h2>手機圖表分析</h2>
+          </div>
+      </div>
+  </div>
+  <div class="hotel_booking_area position">
+      <div class="container">
+          <div class="hotel_booking_table">       
+          </div>
+      </div>
+  </div>
+</section>
 <div class="about_history_area section_gap">
   <div class="container">
     <canvas id="allphone"></canvas>

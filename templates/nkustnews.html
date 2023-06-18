@@ -1,6 +1,6 @@
 {% extends "base/base.html" %}
 {% block title %}
-何敏煌的網站
+高科焦點新聞
 {% endblock %}
 {% block headmessage %}
 <h2> 高科焦點新聞 </h2>
@@ -13,6 +13,7 @@
       <div class="container">
           <div class="banner_content text-center">
               <h2>高科大焦點新聞</h2>
+              <h4>你可以點選標題，前往該連結</h4>
           </div>
       </div>
   </div>
@@ -35,10 +36,10 @@
                   </tr>
               </thead>
               <tbody>
-                {% for item in data %}
+                {% for item in datas %}
                 <tr>
                   <td>{{ item.id }}</td>
-                  <td>{{ item.title }}</td>
+                  <td><a href = "{{ item.url }}" style = "color:black;">{{ item.title }}</a></td>
                 </tr>
                 {% endfor %}
               </tbody>

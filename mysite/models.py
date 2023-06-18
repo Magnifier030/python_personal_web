@@ -12,7 +12,9 @@ class HBicycleData(models.Model):
         return self.sna
 
 class NKUSTnews(models.Model):
+    date = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
+    url = models.CharField(max_length=200)
     def __str__(self):
         return self.title
     

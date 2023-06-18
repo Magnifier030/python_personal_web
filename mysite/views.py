@@ -11,7 +11,7 @@ def index(request):
     return render(request, "index.html", locals())
 
 def nkustnews(request):
-    data = models.NKUSTnews.objects.all()
+    datas = models.NKUSTnews.objects.all()
     return render(request, "nkustnews.html", locals())
 
 def phonelist(request, id=-1, country=''):

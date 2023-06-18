@@ -13,10 +13,17 @@ for page in range(1, 54):
     url = urls.format(page)
     html = requests.get(url).text
     sel = "#pageptlist > div > div > div > div.d-txt > div.mtitle > a"
+    sel2 = "#pageptlist > div > div > div > div.d-txt > div.mtitle > i"
     soup = BeautifulSoup(html, "html.parser")
+
+    dates = soup.select(sel2)
     titles = soup.select(sel)
-    for title in titles:
-        new_record = models.NKUSTnews(title = title.text.strip())
+    for i in range(len(titles)):
+        new_record = models.NKUSTnews(
+            date = dates[i].text.strip(),
+            title = titles[i].text.strip(),
+            url = titles[i].get("href").strip()
+        )
         new_record.save()
     print("Page:{}".format(page))
     time.sleep(3)

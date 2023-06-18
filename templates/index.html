@@ -1,11 +1,111 @@
 {% extends "base/base.html" %}
 
-{% block title %} 何敏煌的網站 {% endblock %}
+{% block title %} 楊士霆的首頁 {% endblock %}
 
 {% block content %}
-<div class="about_history_area section_gap">
-  <div class="container">
-    <h2> 歡迎來到 {{ myname }} 的網站</h2>
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center" style="min-height: 450px">
+      <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="">
+      </div> -->
+      <div class="container">
+          <div class="banner_content text-center">
+              <h2>歡迎來到 {{ myname }} 的網站</h2>
+          </div>
+      </div>
   </div>
+  <div class="hotel_booking_area position">
+    <div class="container">
+        <div class="hotel_booking_table">      
+        </div>
+    </div>
 </div>
+
+</section>
+<section class="testimonial_area section_gap">
+  <div class="container">
+      <div class="section_title text-center">
+          <h2 class="title_color">Python 資料分析 個人網站</h2>
+          <p>以下列出本網站的各種功能，歡迎滑動查閱 </p>
+      </div>
+      <div class="testimonial_slider owl-carousel">
+          <div class="media testimonial_item">
+              <img class="rounded-circle" src="../static/image/other/高科大.png" alt="">
+              <div class="media-body">
+                  <a href="/news/"><h4 class="sec_h4">高科大焦點新聞</h4></a>
+                  <div class="star">
+                      <a href="#"><i class="fa fa-star"></i></a>
+                  </div>
+                  <p>這裡存放了所有關於高科大焦點新聞的相關資料，在此你可以查到編號、日期與新聞標題以及其連結。</p>
+                  <p></p>
+                </div>
+          </div>   
+          <div class="media testimonial_item">
+            <img class="rounded-circle" src="../static/image/other/ubike.png" alt="" style = "height:120px; width:120px">
+            <div class="media-body">
+                <a href="/all/"><h4 class="sec_h4">新竹 u-bike 所有站牌</h4></a>
+                <div class="star">
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p>這裡存放了所有關於新竹 u-bike 的即時剩餘腳踏車輛數與總輛數，歡迎隨時查閱。</p>
+                <p></p>
+            </div>
+          </div>  
+          <div class="media testimonial_item">
+            <img class="rounded-circle" src="../static/image/other/ubike.png" alt="" style = "height:120px; width:120px">
+            <div class="media-body">
+                <a href="/all/"><h4 class="sec_h4">新竹 u-bike 篩選數量後站牌</h4></a>
+                <div class="star">
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p>這裡存放了所有關於新竹 u-bike 的即時剩餘腳踏車輛數與總輛數，並且可讓使用者輸入數量，將會顯示所有新竹站牌剩餘輛數大於該數量的站牌。</p>
+            </div>
+          </div>  
+          <div class="media testimonial_item">
+            <img class="rounded-circle" src="../static/image/other/phone.png" alt="" style = "height:120px; width:120px">
+            <div class="media-body">
+                <a href="/phonelist/"><h4 class="sec_h4">手機品牌列表</h4></a>
+                <div class="star">
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p>這裡存放了所有手機品牌，以及其手機型號與價格，進去網站後可點擊品牌或是國家，進行近一步的篩選。</p>
+            </div>
+          </div> 
+          <div class="media testimonial_item">
+            <img class="rounded-circle" src="../static/image/other/phone.png" alt="" style = "height:120px; width:120px">
+            <div class="media-body">
+                <a href="/chart/"><h4 class="sec_h4">手機圖表分析</h4></a>
+                <div class="star">
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p>這裡展現了關於手機的各種圖表，歡迎來此進行手機的相關分析。</p>
+            </div>
+          </div>  
+          <div class="media testimonial_item">
+            <img class="rounded-circle" src="../static/image/other/stock.jpg" alt="" style = "height:120px; width:120px">
+            <div class="media-body">
+                <a href="/stock300list/"><h4 class="sec_h4">股票價格篩選查詢</h4></a>
+                <div class="star">
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                    <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p>這裡存放了所有股票代碼及其股票名稱，你可以透過價格去篩選要查詢的股票。</p>
+            </div>
+          </div> 
+      </div>
+  </div>
+</section>
 {% endblock %}

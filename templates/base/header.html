@@ -2,7 +2,7 @@
   <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="/">C111118223 楊士霆</a>
+          <a class="navbar-brand logo_h" href="/" style = "">C111118223 楊士霆</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -11,18 +11,18 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
-                  <li class="nav-item active"><a class="nav-link" href="/">Home</a></li> 
+                  <li class="nav-item {{index}}"><a class="nav-link" href="/">Home</a></li> 
                   <li class="nav-item"><a class="nav-link" href="https://www.nkust.edu.tw" target="_blank">高科大</a></li>                 
                   <li class="nav-item"><a class="nav-link" href="/admin/" target="_blank">後台管理</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/news/" >高科大焦點新聞</a></li>
-                  <li class="nav-item submenu dropdown">
+                  <li class="nav-item {{news}}"><a class="nav-link" href="/news/" >高科大焦點新聞</a></li>
+                  <li class="nav-item submenu dropdown {{bike}}">
                       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新竹市U-Bike</a>
                       <ul class="dropdown-menu">
                           <li class="nav-item"><a class="nav-link" href="/all/">新竹市公共自行車所有站</a></li>
                           <li class="nav-item"><a class="nav-link" href="/filter/">篩選可用台數自行車站列表</a></li>
                       </ul>
                   </li>
-                  <li class="nav-item submenu dropdown">
+                  <li class="nav-item submenu dropdown {{add}}">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新增功能</a>
                     <ul class="dropdown-menu">
                         <li class="nav-item"><a class="nav-link" href="/phonelist/">新款手機列表</a></li>

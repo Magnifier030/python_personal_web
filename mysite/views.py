@@ -6,15 +6,18 @@ from mysite import models  # 從 mysite 的資料夾中的 models.py 匯入所�
 import random     # 匯入隨機模組
 
 def index(request):
+    index = "active"
     mynames = ["高科咖啡因", "有點想睡覺", "今天要吃啥"]
     myname = random.choice(mynames)
     return render(request, "index.html", locals())
 
 def nkustnews(request):
+    news = "active"
     datas = models.NKUSTnews.objects.all()
     return render(request, "nkustnews.html", locals())
 
 def phonelist(request, id=-1, country=''):
+    add = "active"
     dots = "../../"
     print(str(id) + " " + country)
     if id == -1 and country == '':
@@ -30,6 +33,7 @@ def phonelist(request, id=-1, country=''):
     return render(request, "phonelist.html", locals())
 
 def all_data(request):
+    bike = "active"
     # 先把舊資料通通刪除
     models.HBicycleData.objects.all().delete()
     # 要比照all_data函式的程式，把網站上所有的資料都下載解析，放到資料表 (HBicycleData) 裡面
@@ -50,6 +54,7 @@ def all_data(request):
     return render(request, "all.html", locals())
 
 def filtered_data(request):
+    bike = "active"
     try:
         num = int(request.GET['num'])
     except:
@@ -81,10 +86,12 @@ def filtered_data(request):
     return render(request, "filter.html", locals())
 
 def chart(request):
+    add = "active"
     data = models.PhoneModel.objects.all()
     return render(request, "chart.html", locals())
 
 def stock300list(request):
+    add = "active"
     try:
         cost = int(request.GET['cost'])
         data = models.StockInfo.objects.filter(price__gte=cost).order_by('-price')
